@@ -5,4 +5,4 @@ In order to run these proofs you will need to install CBMC and other tools by fo
 
 [![GitHub All Releases](https://img.shields.io/github/downloads/RTEdbg/RTEtest/total.svg)](https://bard.google.com/)
 
-[![GitHub All Releases](https://img.shields.io/github/downloads/RTEdbg/RTEtest/total.svg)]()
+[![GitHub All Releases](https://img.shields.io/github/downloads/RTEdbg/RTEtest/total.svg)](Halo stari)
