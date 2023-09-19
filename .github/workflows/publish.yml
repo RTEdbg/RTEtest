@@ -1,0 +1,28 @@
+name: Release automation
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_id:
+        description: 'Commit ID to tag and create a release for'
+        required: true
+      version_number:
+        description: 'Release Version Number (Eg, v1.0.0)'
+        required: true
+
+jobs:
+  create-release:
+    name: Create Release and Upload Release Asset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.event.inputs.version_number }}
+          release_name: ${{ github.event.inputs.version_number }}
+          body: Release ${{ github.event.inputs.version_number }}
+          draft: false
+          prerelease: false
