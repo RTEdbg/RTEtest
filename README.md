@@ -1,2 +1,2 @@
 # RTEtest
-RTEtest
+RTEtest - test repository download
